@@ -16,7 +16,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    user: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -28,20 +28,20 @@ User.init(
         isEmail: true,
       },
     },
-    password: {
+    pw: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [8],
       },
     },
-    post_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "post",
-        key: "id",
-      },
-    },
+    // blog_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "blog",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     hooks: {
